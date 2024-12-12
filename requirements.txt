@@ -1,0 +1,7 @@
+# torch
+# torchinfo
+# torchmetrics
+mlflow
+notebook
+
+# Add version

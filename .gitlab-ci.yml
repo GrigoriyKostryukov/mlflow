@@ -1,0 +1,33 @@
+stages:
+  - lint
+  - build
+  - test
+
+lint:
+  stage: lint
+  image: python:3.10
+  before_script:
+    - apt-get update -yq && apt-get install -yq make # Install make if the image doesn't have it
+  script:
+    - make lint/install
+    - make lint
+  only:
+    - merge_requests
+    - main
+  allow_failure: false
+
+build:
+  stage: build
+  image: python:3.10
+  script:
+    - echo "Build stage commands go here"
+  only:
+    - main
+
+test:
+  stage: test
+  image: python:3.10
+  script:
+    - echo "Testing commands go here"
+  only:
+    - main

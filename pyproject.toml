@@ -1,0 +1,10 @@
+[tool.isort]
+profile = "black"
+lines_between_sections = 1
+known_first_party = []
+skip_glob = []
+
+[tool.black]
+line-length = 79
+skip-string-normalization = true
+exclude = ""

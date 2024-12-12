@@ -1,0 +1,25 @@
+{
+  "model": {
+    "type": "NeuralNetwork",
+    "parameters": {}
+  },
+  "device": "cuda",
+  "epochs": 3,
+  "loss_function": {
+    "type": "CrossEntropyLoss",
+    "parameters": {}
+  },
+  "metric_function": {
+    "type": "Accuracy",
+    "parameters": {
+      "task": "multiclass",
+      "num_classes": 10
+    }
+  },
+  "optimizer": {
+    "type": "SGD",
+    "parameters": {
+      "lr": 0.001
+    }
+  }
+}
